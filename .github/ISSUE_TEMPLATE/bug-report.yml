@@ -46,6 +46,13 @@ body:
         - "Yes"
     validations:
       required: false
+  - type: textarea
+    id: other
+    attributes:
+      label: "Other details or mentions"
+      description: "Please provide any other details or worthy mentions around this issue report"
+    validations:
+      required: false
   - type: markdown
     id: env-info
     attributes:
