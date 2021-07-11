@@ -1,39 +1,46 @@
 name: Bug Report
 description: File a bug report
 title: "[Bug]: "
-labels: [bug, triage]
+labels: [bugs_life, triage-required]
 assignees:
-  - octocat
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
+        "### Welcome"
+        Thanks for taking the time to fill out this bug report! dbatools is testing out a beta of the [new Issues Forms](https://github.blog/changelog/2021-06-23-whats-new-with-github-issues/).
+        Please ensure you provide as much information as asked to better assist in confirming and identifying a fix for the bug report.
+  - type: markdown
+    value: "### Report"
+  - type: checkboxes
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
+      label: Is there an existing issues for this?
+      description: Please search to see if an issue already exists for the bug you encountered.
+      options:
+        - label: I have searched the existing issues
+          required: true
   - type: textarea
-    id: what-happened
+    id: errors-received
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Error Received
+      description: Please provide the stack error you received from executing the command.
+      value: "copy/paste output from `$error[0] | Select *`"
     validations:
       required: true
-  - type: dropdown
-    id: version
+  - type: textarea
+    id: command-run
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: Command Executed
+      description: Command(s) to reproduce the reported error.
+      validations:
+        required: true
+  - type: checkboxes
+    attributes:
+      label: Are you running the latest release?
+      description: Please ensure the bug/error can be reproduced in the latest release of the module
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - label: I am on latest published release
+          required: true
     validations:
       required: true
   - type: dropdown
