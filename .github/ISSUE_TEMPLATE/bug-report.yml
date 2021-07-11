@@ -34,8 +34,8 @@ body:
       description: "Command(s) to reproduce the reported error."
       value: |
         ```powershell
-        $connection = Connect-DbaInstance -SqlInstance mysqlinstance -Credential (Get-Credential)
-        Get-DbaDatabase -SqlInstance $connection -Database master | Set-DbaDbRecoveryModel -RecoveryModel BulkedLogged
+        # provide your command(s) executed pertaining to dbatools
+        # please include variable values (redacted or fake if needed) for reference
         ```
     validations:
         required: true
