@@ -24,7 +24,7 @@ body:
     id: errors-received
     attributes:
       label: "What error did you receive?"
-      description: "Please provide the full error object that can be found after reproducing the error/issue. You can copy/paste the output from `$error[0] | Select *`"
+      description: "Please provide the full error object that can be found after reproducing the error/issue. You can copy/paste the output from: $error[0] | Select *"
       value: ""
     validations:
       required: true
