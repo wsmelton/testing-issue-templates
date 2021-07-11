@@ -33,10 +33,10 @@ body:
       label: "Command Executed"
       description: "Command(s) to reproduce the reported error."
       value: |
-        "```powershell
+        ```powershell
         $connection = Connect-DbaInstance -SqlInstance mysqlinstance -Credential (Get-Credential)
         Get-DbaDatabase -SqlInstance $connection -Database master | Set-DbaDbRecoveryModel -RecoveryModel BulkedLogged
-        ```"
+        ```
     validations:
         required: true
   - type: checkboxes
