@@ -24,7 +24,7 @@ body:
     id: errors-received
     attributes:
       label: "What error did you receive?"
-      description: "Please provide the full error object that can be found after reproducing the error/issue. You can copy/paste the output from: $error[0] | Select *"
+      description: "Please provide the full error object that can be found after reproducing the error/issue. You can copy/paste the output from: $error[0] | select *"
     validations:
       required: true
   - type: textarea
@@ -32,6 +32,11 @@ body:
     attributes:
       label: "Command Executed"
       description: "Command(s) to reproduce the reported error."
+      value: |
+        "```powershell
+        $connection = Connect-DbaInstance -SqlInstance mysqlinstance -Credential (Get-Credential)
+        Get-DbaDatabase -SqlInstance $connection -Database master | Set-DbaDbRecoveryModel -RecoveryModel BulkedLogged
+        ```"
     validations:
         required: true
   - type: checkboxes
