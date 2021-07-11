@@ -1,6 +1,5 @@
 name: Bug Report
 description: File a bug report
-title: "[Bug]: "
 labels: [bugs_life, triage-required]
 body:
   - type: markdown
@@ -24,9 +23,9 @@ body:
   - type: textarea
     id: errors-received
     attributes:
-      label: "Error Received"
-      description: "Please provide the stack error you received from executing the command."
-      value: "copy/paste output from `$error[0] | Select *`"
+      label: "What error did you receive?"
+      description: "Please provide the full error object that can be found after reproducing the error/issue. You can copy/paste the output from `$error[0] | Select *`"
+      value: ""
     validations:
       required: true
   - type: textarea
