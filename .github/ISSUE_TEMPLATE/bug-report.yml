@@ -4,12 +4,12 @@ title: "[Bug]: "
 labels: [bugs_life, triage-required]
 body:
   - type: markdown
+    attributes:
       value: |
         Thanks for taking the time to fill out this bug report! dbatools is testing out a beta of the [new Issues Forms](https://github.blog/changelog/2021-06-23-whats-new-with-github-issues/).
         Please ensure you provide as much information as asked to better assist in confirming and identifying a fix for the bug report.
   - type: markdown
-    attributes:
-      value: "### Report"
+    value: "### Report"
   - type: checkboxes
     attributes:
       label: "Is there an existing issues for this?"
