@@ -49,8 +49,7 @@ body:
   - type: markdown
     id: env-info
     attributes:
-      value: |
-        "## Environmental Details"
+      value: "## Environment Details"
   - type: dropdown
     id: host-detail
     attributes:
@@ -59,8 +58,8 @@ body:
         - PowerShell Core (pwsh.exe)
         - Windows PowerShell (powershell.exe)
         - Windows PowerShell ISE (powershell_ise.exe)
-        - Visual Studio Code (terminal)
-        - Visual Studio Code - PowerShell ext (integrated terminal)
+        - VS Code (terminal)
+        - VS Code - PowerShell ext (integrated terminal)
     validations:
       required: true
   - type: textarea
