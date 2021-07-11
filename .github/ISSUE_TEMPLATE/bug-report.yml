@@ -6,20 +6,18 @@ body:
     id: intro-md
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report! dbatools is testing out a beta of the [new Issues Forms](https://github.blog/changelog/2021-06-23-whats-new-with-github-issues/).
+        > Thanks for taking the time to fill out this bug report! dbatools is testing out a beta of the [new Issues Forms](https://github.blog/changelog/2021-06-23-whats-new-with-github-issues/).
         Please ensure you provide as much information as asked to better assist in confirming and identifying a fix for the bug report.
-  - type: markdown
-    id: report-md
-    attributes:
-      value: "### Report"
-  - type: checkboxes
+  - type: dropdown
     id: existing-issue
     attributes:
-      label: "Is there an existing issues for this?"
+      label: "Verified issue does not already exist?"
       description: "Please search to see if an issue already exists for the bug you encountered."
       options:
-        - label: "I have searched the existing issues"
-          required: true
+        - Yes
+        - No
+      validations:
+        required: true
   - type: textarea
     id: errors-received
     attributes:
@@ -30,20 +28,48 @@ body:
   - type: textarea
     id: command-run
     attributes:
-      label: "Command Executed"
-      description: "Command(s) to reproduce the reported error."
+      label: "Steps to Reproduce"
+      description: "Command(s) and or steps to reproduce the reported error."
       value: |
         ```powershell
         # provide your command(s) executed pertaining to dbatools
         # please include variable values (redacted or fake if needed) for reference
         ```
     validations:
-        required: true
-  - type: checkboxes
-    id: latest-checkbox
+      required: true
+  - type: dropdown
+    id: latest
     attributes:
       label: "Are you running the latest release?"
       description: "Please ensure the bug/error can be reproduced in the latest release of the module"
       options:
-        - label: "I am on latest published release"
-          required: true
+        - Yes
+    validations:
+      required: false
+  - type: markdown
+    id: env-info
+    attributes:
+      value: |
+        "## Environmental Details"
+  - type: dropdown
+    id: host-detail
+    attributes:
+      label: "What PowerShell host was used when producing this error"
+      options:
+        - PowerShell Core (pwsh.exe)
+        - Windows PowerShell (powershell.exe)
+        - Windows PowerShell ISE (powershell_ise.exe)
+        - Visual Studio Code (terminal)
+        - Visual Studio Code - PowerShell ext (integrated terminal)
+  - type: textarea
+    id: ps-version
+    attributes:
+      label: "Copy/Paste the output from $PSVersionTable | clip"
+    validations:
+      required: true
+  - type: textarea
+    id: sql-version
+    attributes:
+      label: "Copy/Paste the output from SELECT @@VERSION for your SQL Server instance"
+    validations:
+      required: true
