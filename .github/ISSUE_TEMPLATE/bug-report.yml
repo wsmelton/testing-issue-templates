@@ -7,37 +7,37 @@ body:
   - type: markdown
     attributes:
       value: |
-        "### Welcome"
+        "### Welcome
         Thanks for taking the time to fill out this bug report! dbatools is testing out a beta of the [new Issues Forms](https://github.blog/changelog/2021-06-23-whats-new-with-github-issues/).
-        Please ensure you provide as much information as asked to better assist in confirming and identifying a fix for the bug report.
+        Please ensure you provide as much information as asked to better assist in confirming and identifying a fix for the bug report."
   - type: markdown
     value: "### Report"
   - type: checkboxes
     attributes:
-      label: Is there an existing issues for this?
-      description: Please search to see if an issue already exists for the bug you encountered.
+      label: "Is there an existing issues for this?"
+      description: "Please search to see if an issue already exists for the bug you encountered."
       options:
-        - label: I have searched the existing issues
+        - label: "I have searched the existing issues"
           required: true
   - type: textarea
     id: errors-received
     attributes:
-      label: Error Received
-      description: Please provide the stack error you received from executing the command.
+      label: "Error Received"
+      description: "Please provide the stack error you received from executing the command."
       value: "copy/paste output from `$error[0] | Select *`"
     validations:
       required: true
   - type: textarea
     id: command-run
     attributes:
-      label: Command Executed
-      description: Command(s) to reproduce the reported error.
+      label: "Command Executed"
+      description: "Command(s) to reproduce the reported error."
     validations:
         required: true
   - type: checkboxes
     attributes:
-      label: Are you running the latest release?
-      description: Please ensure the bug/error can be reproduced in the latest release of the module
+      label: "Are you running the latest release?"
+      description: "Please ensure the bug/error can be reproduced in the latest release of the module"
       options:
-        - label: I am on latest published release
+        - label: "I am on latest published release"
           required: true
