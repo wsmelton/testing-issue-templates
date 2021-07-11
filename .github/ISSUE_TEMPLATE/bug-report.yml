@@ -59,18 +59,20 @@ body:
         - Windows PowerShell (powershell.exe)
         - Windows PowerShell ISE (powershell_ise.exe)
         - VS Code (terminal)
-        - VS Code - PowerShell ext (integrated terminal)
+        - VS Code (integrated terminal)
     validations:
       required: true
   - type: textarea
     id: ps-version
     attributes:
-      label: "Copy/Paste the output from $PSVersionTable | clip"
+      label: "PowerShell Host Version"
+      description: "You can provide the output from: $PSVersionTable | clip"
     validations:
       required: true
   - type: textarea
     id: sql-version
     attributes:
-      label: "Copy/Paste the output from SELECT @@VERSION for your SQL Server instance"
+      label: "SQL Server Edition and Build number"
+      description: "You can provide the output from: SELECT @@VERSION"
     validations:
       required: true
