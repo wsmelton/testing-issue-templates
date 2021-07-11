@@ -14,10 +14,10 @@ body:
       label: "Verified issue does not already exist?"
       description: "Please search to see if an issue already exists for the bug you encountered."
       options:
-        - Yes
-        - No
-      validations:
-        required: true
+        - "Yes"
+        - "No"
+    validations:
+      required: true
   - type: textarea
     id: errors-received
     attributes:
@@ -43,7 +43,7 @@ body:
       label: "Are you running the latest release?"
       description: "Please ensure the bug/error can be reproduced in the latest release of the module"
       options:
-        - Yes
+        - "Yes"
     validations:
       required: false
   - type: markdown
@@ -61,6 +61,8 @@ body:
         - Windows PowerShell ISE (powershell_ise.exe)
         - Visual Studio Code (terminal)
         - Visual Studio Code - PowerShell ext (integrated terminal)
+    validations:
+      required: true
   - type: textarea
     id: ps-version
     attributes:
